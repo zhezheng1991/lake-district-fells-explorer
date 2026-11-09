@@ -1,0 +1,178 @@
+{
+  "version": "0.3",
+  "kind": "app",
+  "generatedAt": "2026-11-09T12:19:42.283Z",
+  "item": {
+    "title": "Lake District Fells Explorer",
+    "subtitle": "Triangle symbols sized by height and colored by prominence"
+  },
+  "map": {
+    "type": "webmap",
+    "path": "./map.json"
+  },
+  "app": {
+    "template": "nova-app",
+    "preset": "analysis",
+    "showHeader": true,
+    "theme": {
+      "mode": "light",
+      "accent": "default",
+      "design": {
+        "schemaVersion": 1,
+        "id": "environment-parks",
+        "name": "Environment & Parks",
+        "source": {
+          "kind": "built-in"
+        },
+        "sourceSha256": "d112c660a49e1cef43d909d304baecce9f196325018726f53e0bb66d4da482e9",
+        "guidance": "# Environment & Parks\n\n## Overview\n\nFor park visitors and the public, and for the teams who care for land, habitat and green space. The reader is curious: where can I go, what lives here, how is this place changing? The page feels open, warm and unhurried. It invites exploring, and the landscape on the map stays the subject.\n\n## Colors\n\nSoft green-tinted surfaces and one living green. In light mode the green deepens to a leaf or moss tone so labels read on it; in dark mode it is a fresh, bright green. Green marks the primary action, the selected place and what the reader can act on. It does not mean that a place is healthy.\n\nHabitat, land cover and condition classes are the map's. A chart of those classes sets `colors` that match the map. Poor air, fire danger or a closed trail uses the status colors, stated in words as well.\n\n## Typography\n\nA humanist sans where the system has one, with a plain system sans in its place elsewhere. Text is friendly and easy to read, with roomy sizes and a welcoming title. Write the way a good park guide talks: \"Open all year; the east trail closes after heavy rain\". Content a behavior draws inherits the page's font and size.\n\n## Layout\n\nGenerous spacing suits a page opened once and read at ease, with fewer blocks. Lead with the places to explore, using `places` in a side panel, or with one or two figures for a land management page. `immersive` suits exploring, with short panels placed away from the area being shown. Details of the selected place sit below the list.\n\n## Elevation & Depth\n\nDepth comes from tonal steps between surfaces, with thin borders. Floating panels are translucent with a soft blur, so the landscape carries on behind them; keep their text short so it stays clear.\n\n## Shapes\n\nCorners are soft and visibly rounded on panels and blocks, and smaller on controls. Chips stay fully round so they read as chips.\n\n## Components\n\n- **Places:** the main way to explore, with a clear name and one short line about each place.\n- **KPI:** one or two figures that mean something to a visitor or a land manager, each with its unit.\n- **Chart:** a donut for parts of one whole, such as land cover; sorted bars to compare parks or sites.\n- **Selector:** chips for activity or habitat; `steps` to move through seasons or years.\n- **Text:** a sentence or two that welcomes the reader or explains the place.\n- **Buttons:** one primary action in a panel, labeled with a short verb such as \"Explore\" or \"Find a trail\".\n\n## Map\n\nChoose a basemap with some sense of the land: a topographic basemap when terrain matters, or imagery for habitat and land cover. Keep symbols simple and pair color with shape, so trails, facilities and sensitive areas differ at a glance. Open on the park or area itself, and let `places` fly between sites. A `legend` widget names classes in everyday words.\n\n## Do's and Don'ts\n\n- Do use warm, everyday language that a first-time visitor understands.\n- Do keep the page short and let the map carry the place.\n- Do match class colors between the map and charts.\n- Don't use green to imply a good or healthy result without a measure behind it.\n- Don't cover the landscape with wide panels or several floating panels.\n- Don't use stock decoration, large banners or motion that competes with the map.",
+        "tokens": {
+          "light": {
+            "background": "#eff4ea",
+            "surface": "#ffffff",
+            "surfaceRaised": "#e8f1e2",
+            "foreground": "#1e2d2b",
+            "foregroundMuted": "#4c635f",
+            "border": "#ced9d4",
+            "accent": "#568110",
+            "accentHover": "#496e0e",
+            "accentActive": "#3c5a0b"
+          },
+          "dark": {
+            "background": "#192328",
+            "surface": "#1b2533",
+            "surfaceRaised": "#2a393f",
+            "foreground": "#e8eef9",
+            "foregroundMuted": "#a9b5c9",
+            "border": "#34435b",
+            "accent": "#a3e635",
+            "accentHover": "#aee94d",
+            "accentActive": "#b9ec65"
+          },
+          "typography": {
+            "fontFamily": "Optima, \"Trebuchet MS\", \"Segoe UI\", system-ui, \"Microsoft YaHei\", \"PingFang SC\", sans-serif",
+            "bodySize": 15,
+            "headingSize": 18,
+            "titleSize": 32,
+            "lineHeight": 1.6
+          },
+          "spacing": {
+            "gap": 16,
+            "padding": 16
+          },
+          "radius": 8,
+          "overlay": {
+            "opacity": 0.84,
+            "blur": 16
+          },
+          "chart": {
+            "light": [
+              "#568110",
+              "#c2417c",
+              "#0f8a84",
+              "#7d55c7",
+              "#8a5a3c",
+              "#2f6fb5",
+              "#c4641a",
+              "#5f7694"
+            ],
+            "dark": [
+              "#a3e635",
+              "#8fa3bf",
+              "#e8912e",
+              "#5b9bea",
+              "#c49a7a",
+              "#a183e0",
+              "#2fb8ad",
+              "#e0699c"
+            ]
+          }
+        }
+      }
+    },
+    "layout": {
+      "right": {
+        "hidden": false,
+        "width": "340px",
+        "title": "Prominence color ramp",
+        "collapsed": false,
+        "blocks": [
+          {
+            "type": "customMount",
+            "id": "prominence-ramp-controls",
+            "title": "Color styling"
+          }
+        ]
+      }
+    },
+    "layoutMode": "docked",
+    "widgets": [
+      {
+        "id": "legend",
+        "type": "legend",
+        "slot": "bottom-left",
+        "config": {}
+      },
+      {
+        "id": "home",
+        "type": "home",
+        "slot": "top-left",
+        "config": {}
+      },
+      {
+        "id": "default-layer-list",
+        "type": "layerList",
+        "slot": "top-right",
+        "config": {}
+      },
+      {
+        "id": "default-basemap-gallery",
+        "type": "basemapGallery",
+        "slot": "top-right",
+        "config": {}
+      }
+    ],
+    "interactions": [],
+    "behaviors": [
+      {
+        "id": "prominence-ramp-controls",
+        "label": "Prominence color-ramp controls",
+        "bundlePath": "./runtime/behaviors/prominence-ramp-controls-f1a48e6ea1a4ddf8.js",
+        "sourceSha256": "f1a48e6ea1a4ddf8532fd6e1a4eda6152077b685a7b57b11d777c02f8a8f06fb",
+        "modulePaths": [],
+        "config": {
+          "layerId": "1a1c0409888-layer-2",
+          "heightField": "Metres",
+          "prominenceField": "Drop_",
+          "heightMin": 37,
+          "heightMax": 978.07,
+          "prominenceMin": 0,
+          "prominenceMax": 912.2
+        },
+        "mounts": [
+          "prominence-ramp-controls"
+        ],
+        "ownedLayerIds": [],
+        "interactions": [],
+        "installedAt": "2026-11-09T12:20:51.597Z"
+      }
+    ]
+  },
+  "nova": {
+    "basename": "f8eb8989-10d7-4552-a788-10667fb1203c",
+    "presentationMode": "app",
+    "ownedGraphicsLayerIds": [],
+    "origin": {
+      "portalUrl": "https://www.arcgis.com",
+      "mapId": "output-0220d8fd-601c-4ee8-bc47-ac094ea0a763",
+      "mapName": "New Conversation",
+      "viewMode": "2d",
+      "capturedAt": "2026-11-09T12:19:42.281Z"
+    },
+    "sourceSelection": {
+      "mode": "all"
+    },
+    "unsupportedLayers": [],
+    "degradedFeatures": []
+  }
+}
